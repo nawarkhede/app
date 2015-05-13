@@ -2,5 +2,14 @@
 {% load i18n %}
 
 {% block content %}
-<a href="{% url 'books_add' %}">add new book here..</a>
+<a href="{% url 'authors_add' %}">add new author here..</a>
+</br>
+
+{% for i in authors_list%}
+{{i.name}}
+
+{% endfor %}
+
 {% endblock %}
+
+

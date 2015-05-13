@@ -1,4 +1,4 @@
 from django.contrib import admin
-from books.models import Author
+from authors.models import Author
 
 admin.site.register(Author)

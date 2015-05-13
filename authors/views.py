@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from books.forms import AuthorAddForm
-from books.models import Author
+from authors.forms import AuthorAddForm
+from authors.models import Author
 
 def add(request):
 
@@ -14,4 +14,4 @@ def add(request):
 			author.name = form.cleaned_data['name']
 			author.email = form.cleaned_data['email']
 			author.save()
-	return render(request, 'books/addbook.html', {'addauthorform':form})
+	return render(request, 'authors/addauthor.html', {'addauthorform':form})

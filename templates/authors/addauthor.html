@@ -2,9 +2,9 @@
 {% load i18n %}
 
 {% block content %}
-Add New Book 
+Add New Author,
 
-<form action="{% url 'books_add' %}" method='post'>{% csrf_token %}
+<form action="{% url 'authors_add' %}" method='post'>{% csrf_token %}
 {{ addauthorform.as_p }}
 <input type='submit' value='Submit' />
 {% endblock %}
