@@ -12,4 +12,4 @@ or install using pip
 
 
 username : ```nish**.nawa******@gmail.com```
-password : nishant
+password : *******
