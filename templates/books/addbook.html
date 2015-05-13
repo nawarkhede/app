@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+Add New Book 
+
+<form action="{% url 'books_add' %}" method='post'>{% csrf_token %}
+{{ addauthorform.as_p }}
+<input type='submit' value='Submit' />
+{% endblock %}

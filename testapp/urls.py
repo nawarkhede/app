@@ -8,7 +8,9 @@ urlpatterns = patterns('',
 	url(r'^accounts/', include('registration.backends.default.urls')),
     # Examples:
     url(r'^$', 'testapp.views.home', name='index'),
-    # url(r'^testapp/', include('testapp.foo.urls')),
+    url(r'^accounts/profile/$', 'testapp.views.profile', name='profile'),
+    url(r'^landingpage/$', 'testapp.views.landingpage', name='landingpage'),
+    url(r'^books/', include('books.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
