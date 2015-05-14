@@ -1,4 +1,6 @@
 # Django settings for testapp project.
+import os
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -108,7 +110,7 @@ ROOT_URLCONF = 'testapp.urls'
 WSGI_APPLICATION = 'testapp.wsgi.application'
 
 TEMPLATE_DIRS = (
-    'templates',
+    PROJECT_PATH + '/../templates/',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
