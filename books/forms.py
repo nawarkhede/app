@@ -5,10 +5,10 @@ from authors.models import Author
 
 def get_all_authors():
 	all_authors=[]
-	# for i in Author.objects.all():
-	# 	all_authors.append((i.id,i.name))
-
-	return [(i,i) for i in range(10)]
+	for i in Author.objects.all():
+		all_authors.append((i.id,i.name))
+		
+	return all_authors
 
 class BookAddForm(forms.Form):
 	def __init__(self, *args, **kwargs):
