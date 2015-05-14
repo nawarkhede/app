@@ -7,7 +7,8 @@ def get_all_authors():
 	all_authors=[]
 	for i in Author.objects.all():
 		all_authors.append((i.id,i.name))
-	return all_authors
+
+	return [(i,i) for i in range(10)]
 
 class BookAddForm(forms.Form):
 	def __init__(self, *args, **kwargs):
