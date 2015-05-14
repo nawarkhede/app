@@ -1,9 +1,10 @@
 from django.shortcuts import render_to_response,render
 from django.http import HttpResponseRedirect
 from authors.models import Author
+from books.models import Book
 
 def home(request):
-	return render_to_response('index.html', {'posts': ''})
+	return HttpResponseRedirect('/landingpage/')
 
 
 def profile(request):
@@ -12,4 +13,5 @@ def profile(request):
 def landingpage(request):
 
 	authors_list  = Author.objects.all()
-	return render(request, 'landingpage.html', {'authors_list':authors_list})
+	books_list = Book.objects.all()
+	return render(request, 'landingpage.html', {'authors_list':authors_list,'books_list':books_list})

@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     url(r'^accounts/profile/$', 'testapp.views.profile', name='profile'),
     url(r'^landingpage/$', 'testapp.views.landingpage', name='landingpage'),
     url(r'^authors/', include('authors.urls')),
+    url(r'^books/', include('books.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

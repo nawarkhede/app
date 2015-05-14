@@ -3,12 +3,27 @@
 
 {% block content %}
 <a href="{% url 'authors_add' %}">add new author here..</a>
+<a href="{% url 'books_add' %}">add new book here..</a>
 </br>
+<h4> Availble Authors </h4>
 
+<table>
 {% for i in authors_list%}
-{{i.name}}
+<tr><td><a href='#'>{{i.name}}</a></td></tr>
+
 
 {% endfor %}
+</table>
+
+
+<h4> Availble Books </h4>
+<table>
+{% for i in books_list%}
+<tr><td>{{i.name}}</td></tr>
+
+
+{% endfor %}
+</table>
 
 {% endblock %}
 
