@@ -5,8 +5,8 @@ from authors.models import Author
 
 def get_all_authors():
 	all_authors=[]
-	for i in Author.objects.all():
-		all_authors.append((i.id,i.name))
+	# for i in Author.objects.all():
+	# 	all_authors.append((i.id,i.name))
 
 	return [(i,i) for i in range(10)]
 
