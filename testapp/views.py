@@ -12,6 +12,6 @@ def profile(request):
 
 def landingpage(request):
 
-	# authors_list  = Author.objects.all()
-	# books_list = Book.objects.all()
-	return render(request, 'landingpage.html', {'authors_list':'','books_list':''})
+	authors_list  = Author.objects.all()
+	books_list = Book.objects.all()
+	return render(request, 'landingpage.html', {'authors_list':authors_list,'books_list':books_list})
